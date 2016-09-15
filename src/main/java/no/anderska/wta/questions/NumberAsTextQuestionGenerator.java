@@ -44,7 +44,7 @@ public class NumberAsTextQuestionGenerator extends AbstractQuestionGenerator {
 
     public static class LargeNumbers extends NumberAsTextQuestionGenerator {
         public LargeNumbers() {
-            super("Convert any number to text. E.g. 12225 => 'twelve thosand two hundred and twenty five'");
+            super("Convert any number to text. E.g. 12225 => 'twelve thousand two hundred and twenty five'");
         }
 
         @Override
