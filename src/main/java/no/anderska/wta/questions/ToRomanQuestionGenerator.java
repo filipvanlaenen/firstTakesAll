@@ -9,7 +9,7 @@ class ToRomanQuestionGenerator extends AbstractQuestionGenerator {
 
     protected ToRomanQuestionGenerator(int maxNumber, int numberOfQuestions, String description) {
         super(numberOfQuestions, description);
-        this.maxNumber = Validate.numberInRange(maxNumber, "maxNumber", 1, 3999);
+        this.maxNumber = (int) Validate.numberInRange(maxNumber, "maxNumber", 1, 3999);
     }
 
     public ToRomanQuestionGenerator() {
@@ -21,7 +21,7 @@ class ToRomanQuestionGenerator extends AbstractQuestionGenerator {
     @Override
     protected Question createQuestion() {
         int pickedNumber = random.nextInt(maxNumber) + 1;
-        return new Question("" + pickedNumber, solver.romanNumber(pickedNumber));
+        return new Question("" + pickedNumber, solver.toNumber(pickedNumber));
     }
 
     static class Small extends ToRomanQuestionGenerator {

@@ -2,7 +2,7 @@ package no.anderska.wta;
 
 public class Validate {
 
-    public static int numberInRange(int number, String name, int min, int max) {
+    public static long numberInRange(long number, String name, long min, long max) {
         if (number < min || number > max) {
             String message = name + " " + number + " should be in range [" + min + "-" + max + "]";
             throw new IllegalArgumentException(message);

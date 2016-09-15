@@ -19,7 +19,7 @@ class MinesweeperQuestionGenerator implements QuestionGenerator {
     private MinesweeperQuestionGenerator(int rows, int cols, int percentMines, int numberOfBoards) {
         this.rows = Validate.positiveNumber(rows, "rows");
         this.cols = Validate.positiveNumber(cols, "cols");
-        this.percentMines = Validate.numberInRange(percentMines, "percentMines", 1, 100);
+        this.percentMines = (int) Validate.numberInRange(percentMines, "percentMines", 1, 100);
         this.numberOfBoards = Validate.positiveNumber(numberOfBoards, "numberOfBoards");
     }
 

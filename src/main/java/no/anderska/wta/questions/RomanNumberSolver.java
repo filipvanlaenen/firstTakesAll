@@ -1,6 +1,6 @@
 package no.anderska.wta.questions;
 
-class RomanNumberSolver {
+class RomanNumberSolver implements NumberSolver {
     private static class Number {
         private int num;
         StringBuilder res = new StringBuilder();
@@ -23,8 +23,9 @@ class RomanNumberSolver {
         }
     }
 
-    String romanNumber(int number) {
-        Number n = new Number(number);
+	@Override
+	public String toNumber(long number) {
+        Number n = new Number((int) number);
         while (
                 n.match(1000, "M") ||
                         n.match(900, "CM") ||
@@ -41,5 +42,5 @@ class RomanNumberSolver {
                         n.match(1, "I")
                 ) {}
         return n.getRes().toString();
-    }
+	}
 }
